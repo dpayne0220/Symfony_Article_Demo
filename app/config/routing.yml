@@ -1,0 +1,11 @@
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+_comment:
+    pattern: comment
+    defaults: { _controller: AppBundle:Controller:comment }
+    
+_article:
+    pattern: article
+    defaults: { _article: AppBundle:Controller:article }

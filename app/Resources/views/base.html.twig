@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}The Blogosphere{% endblock %}</title>
+        {% block stylesheets %}
+            {% stylesheets 'bundles/appbundle/css/*' filter='cssrewrite' %}
+                <link rel="stylesheet" href="{{ asset_url }}" />
+            {% endstylesheets %}
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        <div id="container">
+            <div id="pageContent">
+                {% block body %}{% endblock %}
+            </div>
+        </div>
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

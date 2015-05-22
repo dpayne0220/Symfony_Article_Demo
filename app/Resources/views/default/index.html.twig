@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h2>Show Articles.</h2><br/>
+
+<table>
+{% for article in articles %}
+<tr>
+<td>{{ article.headline }}</td><td><a href="/view/{{ article.id }}">View</a></td>
+</tr>
+{% endfor %}
+</table>
+<a href="/createArticle">Create Article</a>
+    
+{% endblock %}
